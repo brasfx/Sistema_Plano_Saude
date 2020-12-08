@@ -1,17 +1,25 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Usuarios>
-  <Medico>
+  <Usuario>
+    <nome>Admin</nome>
+    <email>admin@bemestar.com</email>
+    <senha>admin123</senha>
+    <tipo>admin</tipo>
+  </Usuario>
+  <Usuario>
     <nome>Davi</nome>
     <sobrenome>Ribeiro</sobrenome>
-    <crm>123456</crm>
+    <crm>54184198</crm>
+    <email>medicocardio@bemestra.com</email>
+    <senha>medico123</senha>
+    <tipo>medico</tipo>
+  </Usuario>
+  <Usuario>
+    <nome>Maria </nome>
+    <sobrenome>jesus </sobrenome>
+    <crm>84984984</crm>
     <email>medicopediatra@bemestar.com</email>
-    <senha>medicopediatra123</senha>
-  </Medico>
-  <Medico>
-    <nome>Pedro</nome>
-    <sobrenome>Ferreira</sobrenome>
-    <crm>123456789</crm>
-    <email>pedroortop@bemestar.com</email>
-    <senha>pedroortop123</senha>
-  </Medico>
+    <senha>senha123</senha>
+    <tipo>medico</tipo>
+  </Usuario>
 </Usuarios>

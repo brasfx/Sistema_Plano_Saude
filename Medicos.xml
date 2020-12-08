@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Medicos>
   <Medico>
     <nome>Davi</nome>
     <sobrenome>Ribeiro</sobrenome>
     <telefone>33988733531</telefone>
     <endereco>Rua A</endereco>
-    <crm>123456</crm>
-    <especializacao>Pediatra</especializacao>
-    <email>medicopediatra@bemestar.com</email>
-    <senha>medicopediatra123</senha>
+    <crm>54184198</crm>
+    <especializacao>Cardiologia</especializacao>
+    <email>medicocardio@bemestra.com</email>
+    <senha>medico123</senha>
   </Medico>
   <Medico>
-    <nome>Pedro</nome>
-    <sobrenome>Ferreira</sobrenome>
-    <telefone>123456</telefone>
+    <nome>Maria </nome>
+    <sobrenome>jesus </sobrenome>
+    <telefone>5484894</telefone>
     <endereco>Rua B</endereco>
-    <crm>123456789</crm>
-    <especializacao>Ortopedia</especializacao>
-    <email>pedroortop@bemestar.com</email>
-    <senha>pedroortop123</senha>
+    <crm>84984984</crm>
+    <especializacao>Pediatra</especializacao>
+    <email>medicopediatra@bemestar.com</email>
+    <senha>senha123</senha>
   </Medico>
 </Medicos>

@@ -46,12 +46,13 @@ if ($user == 0) {
   $xmlFile = simplexml_load_file("Usuarios.xml");
   $xmlLocalCopy = new SimpleXMLElement($xmlFile->asXML());
 
-  $newAcct = $xmlLocalCopy->addChild("Medico");
+  $newAcct = $xmlLocalCopy->addChild("Usuario");
   $newAcct->addChild("nome", $nome);
   $newAcct->addChild("sobrenome", $sobrenome);
   $newAcct->addChild("crm", $crm);
   $newAcct->addChild("email", $email);
   $newAcct->addChild("senha", $senha);
+  $newAcct->addChild("tipo ", "medico");
 
 
 
