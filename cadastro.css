@@ -1,0 +1,22 @@
+form {
+  align-items: center;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  padding: 20px;
+  width: 200px;
+}
+
+.medico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h5 {
+  text-align: center;
+}
+.nav-extended {
+  background-color: #64ffda;
+}

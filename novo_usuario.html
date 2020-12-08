@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="novo_usuario.css" />
+    <!--Import Google Icon Font-->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <title>Cadastro usuário</title>
+  </head>
+  <body>
+    <div id="login-page" class="row">
+      <div class="col s12 z-depth-6 card-panel">
+        <form class="login-form">
+          <h4 class="center"><strong>Cadastro de usuário</strong></h4>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person_outline</i>
+              <input class="validate" id="email" type="email" />
+              <label for="email" data-error="wrong" data-success="right"
+                >Nome</label
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person_outline</i>
+              <input class="validate" id="email" type="email" />
+              <label for="email" data-error="wrong" data-success="right"
+                >Sobrenome</label
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mail_outline</i>
+              <input class="validate" id="email" type="email" />
+              <label for="email" data-error="wrong" data-success="right"
+                >Email</label
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="password" type="password" />
+              <label for="password">Senha</label>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              padding: 10px;
+            "
+          >
+            <label style="margin-right: 30px">
+              <input class="with-gap" name="tipo1" type="radio" />
+              <span>Médico</span>
+            </label>
+
+            <label style="margin-right: 30px">
+              <input class="with-gap" name="tipo1" type="radio" />
+              <span>Laborátorio</span>
+            </label>
+
+            <label>
+              <input class="with-gap" name="tipo1" type="radio" />
+              <span>Paciente</span>
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <a href="login.html" class="btn waves-effect waves-light"
+                >Enviar</a
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="selectUser.js"></script>
+  </body>
+</html>

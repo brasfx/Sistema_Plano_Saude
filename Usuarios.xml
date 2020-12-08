@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Usuarios>
+  <Medico>
+    <nome>Davi</nome>
+    <sobrenome>Ribeiro</sobrenome>
+    <crm>123456</crm>
+    <email>medicopediatra@bemestar.com</email>
+    <senha>medicopediatra123</senha>
+  </Medico>
+  <Medico>
+    <nome>Pedro</nome>
+    <sobrenome>Ferreira</sobrenome>
+    <crm>123456789</crm>
+    <email>pedroortop@bemestar.com</email>
+    <senha>pedroortop123</senha>
+  </Medico>
+</Usuarios>

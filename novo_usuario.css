@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+html {
+  margin: auto;
+}
+body {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+}
+
+img {
+  width: 200px;
+}
