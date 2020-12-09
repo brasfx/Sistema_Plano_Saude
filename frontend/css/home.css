@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+html {
+  display: table;
+  margin: auto;
+}
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#login-page {
+  width: 500px;
+  text-align: center;
+}
+
+a {
+  margin: 10px;
+}
+img {
+  margin-top: 50px;
+  width: 300px;
+}
+.title {
+  margin-bottom: 20px;
+  font-weight: bold;
+}

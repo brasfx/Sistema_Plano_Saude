@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicos>
+  <medico CRM="456789" senha="123456">
+    <nome>João</nome>
+    <email>medicocardio@bemestra.com</email>
+    <telefone>5398554678</telefone>
+    <CEP>5498498498</CEP>
+    <endNum>Rua C, 45</endNum>
+    <especialidade>Cardiologia</especialidade>
+  </medico>
+  <medico CRM="987654" senha="1234">
+    <nome>Pedro</nome>
+    <email>pedrocardio@bemestar.com</email>
+    <telefone>3242352</telefone>
+    <CEP>4235425</CEP>
+    <endNum>Rua A</endNum>
+    <especialidade>Cardiologia</especialidade>
+  </medico>
+</medicos>

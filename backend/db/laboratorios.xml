@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<laboratorios>
+
+  <laboratorio CNPJ="123456" senha="123456">
+    <nome>lab sangue</nome>
+    <email>labsangue@bemestar.com</email>
+    <telefone>234568981</telefone>
+    <CEP>445454</CEP>
+    <endNum>Rua A</endNum>
+    <exametipos>Sangue</exametipos>
+  </laboratorio>
+</laboratorios>

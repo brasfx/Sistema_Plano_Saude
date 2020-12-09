@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exames>
+  <exame CPF="151515" CNPJ="151515">
+    <data>2019-05-22</data>
+    <tipoExame>tipagem</tipoExame>
+    <resultado>bom</resultado>
+  </exame>
+  <exame CPF="03642815011" CNPJ="10020030040011">
+    <data>2019-06-20</data>
+    <tipoExame>raio-x</tipoExame>
+    <resultado>fratura</resultado>
+  </exame>
+  <exame CPF="03642815011" CNPJ="10020030040011">
+    <data>2019-06-25</data>
+    <tipoExame>tipagem</tipoExame>
+    <resultado>normal</resultado>
+  </exame>
+</exames>

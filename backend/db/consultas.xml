@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<consultas>
+  <consulta CPF="151515" CRM="151515">
+    <data>2019-05-22</data>
+    <receita>ghfgh</receita>
+    <observacoes>hgkjghk</observacoes>
+  </consulta>
+  <consulta CPF="03642815011" CRM="101628">
+    <data>2019-06-02</data>
+    <receita>paracetamol</receita>
+    <observacoes>dor</observacoes>
+  </consulta>
+  <consulta CPF="03642815022" CRM="101628">
+    <data>2019-06-10</data>
+    <receita>cafe</receita>
+    <observacoes>sono</observacoes>
+  </consulta>
+</consultas>

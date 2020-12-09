@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="cadastro.css"
-    />
+    <link rel="stylesheet" type="text/css" href="../css/cadastro.css" />
     <!--Import Google Icon Font-->
 
     <link
@@ -25,17 +21,17 @@
     <div class="nav-wrapper">
       <nav class="nav-extended">
         <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo"
-            ><img src="logo.png"
+          <a
+            href="../../backend/php/admin/starter_admin.php"
+            class="brand-logo"
+          >
+            <img src="../img/logo.png"
           /></a>
           <ul class="right hide-on-med-and-down">
             <li><a>A link</a></li>
             <li><a>A second link</a></li>
             <li>
-              <a
-                style="display: flex; flex-direction: row"
-                href="login.html"
-              >
+              <a style="display: flex; flex-direction: row" href="./home.html">
                 <i class="material-icons">exit_to_app</i>Logout</a
               >
             </li>
@@ -45,7 +41,7 @@
           <span class="nav-title"></span>
           <a
             class="btn-floating btn-large halfway-fab waves-effect waves-light teal"
-            href="cadastro_lab.html"
+            href="#"
           >
             <i class="material-icons">add</i>
           </a>
@@ -53,17 +49,16 @@
       </nav>
       <div class="medico">
         <div class="input-field col s12">
+          <h5>Cadastro de usuário</h5>
           <select class="browser-default">
             <option value="" disabled selected>
               Escolha o tipo de usuário
             </option>
-            <option value="cadastro_medico.html">
-              Médico
-            </option>
-            <option value="cadastro_lab.html">
+            <option value="../../backend/php/admin/form_med.php">Médico</option>
+            <option value="../../backend/php/admin/form_lab.php">
               Laboratório
             </option>
-            <option value="cadastro_paciente.html">
+            <option value="../../backend/php/admin/form_pac.php">
               Paciente
             </option>
           </select>
@@ -74,6 +69,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="selectUser.js"></script>
+    <script src="../../backend/js/selectUser.js"></script>
   </body>
 </html>
