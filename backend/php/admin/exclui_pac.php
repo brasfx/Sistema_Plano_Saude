@@ -72,7 +72,7 @@ if (isset($_SESSION['tipo'])) {
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">subtitles</i>
-                  <input class="validate" id="CPF" type="number" name="CPF" />
+                  <input class="validate" id="CPF" type="number" name="CPF" required />
                   <label for="CPF" data-error="wrong" data-success="right">CPF</label>
 
                   <div class="row center">

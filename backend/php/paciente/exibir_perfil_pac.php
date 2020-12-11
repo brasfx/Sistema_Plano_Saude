@@ -7,8 +7,8 @@ if (isset($_SESSION['tipo'])) {
 } else {
   header("location: login_pac.php");
 }
-include "../planos/consultas.php";
-$consultas = mostraConsultaPAC($_SESSION['CPF']);
+include "../planos/pacientes.php";
+$pacientes = mostraPerfil($_SESSION['CPF']);
 ?>
 
 <!DOCTYPE html>
@@ -61,22 +61,32 @@ $consultas = mostraConsultaPAC($_SESSION['CPF']);
 
       <div class="box">
         <div class="box-header">
-          <h5 class="center">Minhas consultas</h5>
+          <h5 class="center">Meus dados</h5>
         </div>
         <div class=" table-responsive">
           <table class="table-responsive striped highlight">
             <tr style="background-color: grey;">
-              <th>CRM do Médico</th>
-              <th>Data</th>
-              <th>Receita</th>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Gênero</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Endereço</th>
+              <th>CEP</th>
+
+
             </tr>
             <?php
-            foreach ($consultas as $consulta) {
+            foreach ($pacientes as $paciente) {
               echo
                 "<tr>
-    <td>" . $consulta['CRM'] . "</td>
-    <td>" . $consulta['data'] . "</td>
-    <td>" . $consulta['receita'] . "</td>
+    <td>" . $paciente['nome'] . "</td>
+    <td>" . $paciente['idade'] . " anos" . "</td>
+    <td>" . $paciente['genero'] . "</td>
+    <td>" . $paciente['email'] . "</td>
+    <td>" . $paciente['telefone'] . "</td>
+    <td>" . $paciente['endNum'] . "</td>
+    <td>" . $paciente['CEP'] . "</td>
     </tr>";
             }
             ?>

@@ -36,8 +36,8 @@ $exames = mostraExamePAC($_SESSION['CPF']);
     <div class="nav-wrapper">
       <a href="./starter_pac.php" class="brand-logo"><img src="../../../frontend/img/logo.png" /></a>
       <ul class="right hide-on-med-and-down">
-        <li><a>Inicio</a></li>
-        <li><a>Perfil</a></li>
+        <li><a href="./starter_pac.php">Inicio</a></li>
+        <li><a href="./exibir_perfil_pac.php">Perfil</a></li>
 
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Consultas<i class="material-icons right">arrow_drop_down</i></a></li>
         <li>
@@ -66,7 +66,7 @@ $exames = mostraExamePAC($_SESSION['CPF']);
         <div class=" table-responsive ">
           <table class="table-responsive striped highlight">
             <tr style="background-color: grey">
-              <th>Laboratório</th>
+              <th>CNPJ do Laboratório</th>
               <th>Data</th>
               <th>Tipo de exame</th>
               <th>Resultado</th>

@@ -138,47 +138,25 @@ function excluiPaciente($CPF)
   $xml->save($arquivoxml);
 }
 
-// if (isset($_POST["acao"])) {
-//   switch ($_POST["acao"]) {
-//     case 'incluiPaciente':
-//       if (isset($_POST["CPF"], $_POST["email"],  $_POST["telefone"], $_POST["senha"], $_POST["nome"], $_POST["CEP"], $_POST["endNum"], $_POST["idade"], $_POST["genero"])) {
-//         echo "set";
-//         if (!empty($_POST["CPF"]) && !empty($_POST["email"]) &&  !empty($_POST["telefone"]) && !empty($_POST["senha"]) && !empty($_POST["nome"]) && !empty($_POST["CEP"]) && !empty($_POST["endNum"]) && !empty($_POST["idade"]) && !empty($_POST["genero"])) {
-//           echo "!empty";
-//           incluiPaciente($_POST["CPF"], $_POST["email"],  $_POST["telefone"], $_POST["senha"], $_POST["nome"], $_POST["CEP"], $_POST["endNum"], $_POST["idade"], $_POST["genero"]);
-//         }
-//       }
-//       // header("Location: ../pages/Admin/form_pac.html");
-//       break;
-//     case 'listaPacientes':
-//       $pacMatriz = listaPacientes();
-//       echo "<pre>";
-//       print_r($pacMatriz);
-//       echo "</pre>";
-//       break;
-//     case 'excluiPaciente':
-//       if (isset($_POST["CPF"])) { //só preciso saber obrigatoriamente o CPF
-//         if (!empty($_POST["CPF"])){
-//           excluiPacientes($_POST["CPF"]);
-//         }
-//       }
-//       break;
-//     case 'alteraPaciente':
-//       if (isset($_POST["CPF"])) { //só preciso saber obrigatoriamente o CPF
-//         //o resto se tiver eu atualizo, senão vai NULL para deixar como está
-//         alteraPaciente($_POST["CPF"], (!empty($_POST["email"]) ? $_POST["email"] : NULL), (!empty($_POST["senha"]) ? $_POST["senha"] : NULL), (!empty($_POST["telefone"]) ? $_POST["telefone"] : NULL),(!empty($_POST["nome"]) ? $_POST["nome"] : NULL), (!empty($_POST["CEP"]) ? $_POST["CEP"] : NULL), (!empty($_POST["endNum"]) ? $_POST["endNum"] : NULL), (!empty($_POST["idade"]) ? $_POST["idade"] : NULL), (!empty($_POST["genero"]) ? $_POST["genero"] : NULL));
-//       }
-//       break;
-//     case 'mostraPaciente':
-//       if (isset($_POST["CPF"])) { //só preciso saber obrigatoriamente o CPF
-//         $paciente = mostraPaciente($_POST["CPF"]);
-//         echo "<pre>";
-//         print_r($paciente);
-//         echo "</pre>";
-//       }
-//       break;
-//     default:
-//       echo "Ação não encontrada: "+$_POST["acao"]+"<br>";
-//       break;
-//   }
-// }
+function mostraPerfil($CPF)
+{ // mostra dados do paciente
+  $xml = new DOMDocument();
+  $arquivoxml = "../../db/pacientes.xml";
+  $xml->load($arquivoxml);
+  $busca = array();
+  $count = 0;
+  foreach ($xml->getElementsByTagName('paciente') as $paciente) {
+    if ($paciente->getAttribute('CPF') == $CPF) {
+      $busca[$count]['nome'] = $paciente->getElementsByTagName('nome')[0]->nodeValue;
+      $busca[$count]['email'] = $paciente->getElementsByTagName('email')[0]->nodeValue;
+      $busca[$count]['telefone'] = $paciente->getElementsByTagName('telefone')[0]->nodeValue;
+      $busca[$count]['CEP'] = $paciente->getElementsByTagName('CEP')[0]->nodeValue;
+      $busca[$count]['endNum'] = $paciente->getElementsByTagName('endNum')[0]->nodeValue;
+      $busca[$count]['idade'] = $paciente->getElementsByTagName('idade')[0]->nodeValue;
+      $busca[$count]['genero'] = $paciente->getElementsByTagName('genero')[0]->nodeValue;
+      $count++;
+      // break;
+    }
+  }
+  return $busca;
+}

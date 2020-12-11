@@ -1,4 +1,5 @@
 <?php
+//verifica se o admin já existe
 function existeAdmin($CPF)
 {
   $xml = new DOMDocument();
@@ -14,7 +15,7 @@ function existeAdmin($CPF)
   }
   return $existe;
 }
-
+//cadastra um novo admin
 function insereAdmin($CPF, $senha, $nome)
 {
   if (!existeAdmin($CPF)) {
@@ -42,7 +43,7 @@ function alteraAdmin($CPF, $senha, $nome)
       /*verifica o que vai entrar de dados antigos ou atuais*/
       $senha = ($senha ? $senha : $admin->getAtribute('senha'));
       $nome = ($nome ? $nome : $admin->getElementsByTagName('nome')[0]->nodeValue);
-      /*repopula o elemento Paciente com a decisão anterior*/
+      /*repopula o elemento Admin com a decisão anterior*/
       $adminatualizado = $xml->createElement('admin');
       $adminatualizado->setAttribute('login', $CPF);
       $adminatualizado->setAttribute('senha', $senha);

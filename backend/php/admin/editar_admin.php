@@ -72,20 +72,20 @@ if (isset($_SESSION['tipo'])) {
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">person_outline</i>
-                  <input class="validate" id="nome" type="text" name="nome" />
+                  <input class="validate" id="nome" type="text" name="nome" required />
                   <label for="nome" data-error="wrong" data-success="right">Nome</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">subtitles</i>
-                  <input class="validate" id="CPF" type="text" name="CPF" />
+                  <input class="validate" id="CPF" type="text" name="CPF" required />
                   <label for="CPF" data-error="wrong" data-success="right">CPF</label>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
                     <i class="material-icons prefix">lock_outline</i>
-                    <input id="senha" type="password" name="senha" />
+                    <input id="senha" type="password" name="senha" required />
                     <label for="senha">Senha</label>
                   </div>
                 </div>
