@@ -2,10 +2,10 @@ Sistema de Plano de Saúde implementado para disciplina de Sistemas para Interne
 
 Tecnologias utilizadas 🚀
 
-HTML5
-CSS3
-JavaScript
-PHP
+HTML5<br>
+CSS3<br>
+JavaScript<br>
+PHP<br>
 XML
 
 Happy Hacking!
