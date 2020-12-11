@@ -7,6 +7,7 @@ if (isset($_SESSION['tipo'])) {
 } else {
   header("location: login_admin.php");
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +66,10 @@ if (isset($_SESSION['tipo'])) {
       </a>
     </div>
   </nav>
+  <div class="center" style="font-size: 30px;margin-top:20px">
+    <h4>Seja bem vindo Admin</h4>
+  </div>
+
 
   <!-- REQUIRED JS SCRIPTS -->
 

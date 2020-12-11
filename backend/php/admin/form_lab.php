@@ -89,7 +89,7 @@ if (isset($_SESSION['tipo'])) {
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <i class="material-icons prefix">location_city</i>
+                  <i class="material-icons prefix">room</i>
                   <input class="validate" id="CEP" type="number" name="CEP" required />
                   <label for="CEP" data-error="wrong" data-success="right">CEP</label>
                 </div>

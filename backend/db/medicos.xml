@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <medicos>
-  <medico CRM="151515" senha="123456">
-    <nome>Maria de Jesus</nome>
-    <email>emaildamaria@bemestar.com</email>
-    <telefone>3355887799</telefone>
-    <CEP>557789945</CEP>
-    <endNum>Rua laterada</endNum>
-    <especialidade>Ortopedia</especialidade>
-  </medico>
-  <medico CRM="987654" senha="123456">
-    <nome>José Silva</nome>
-    <email>josesilva@bemestar.com</email>
-    <telefone>3355789456</telefone>
-    <CEP>96203900</CEP>
-    <endNum>Rua das Alamedas</endNum>
-    <especialidade>Cardiologia</especialidade>
+
+  <medico CRM="326995651" senha="senhamedico123">
+    <nome>Eduardo Muniz</nome>
+    <email>eduardomuniz@bemestar.com</email>
+    <telefone>5398731548</telefone>
+    <CEP>875421000</CEP>
+    <endNum>Rua A, 26</endNum>
+    <especialidade>Cardiologista</especialidade>
   </medico>
 </medicos>

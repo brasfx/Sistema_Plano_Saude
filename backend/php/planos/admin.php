@@ -54,3 +54,20 @@ function alteraAdmin($CPF, $senha, $nome)
     }
   }
 }
+
+function mostraAdmin($CPF)
+{
+  $xml = new DOMDocument();
+  libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
+  $arquivoxml = "../../db/admin.xml";
+  $xml->load($arquivoxml);
+  $busca = array();
+  foreach ($xml->getElementsByTagName('admin') as $admin) {
+    if ($admin->getAttribute('login') == $CPF) {
+      //$busca['senha'] = $admin->getAtribute('senha');
+      $busca['nome'] = $admin->getElementsByTagName('nome')[0]->nodeValue;
+      break;
+    }
+  }
+  return $busca;
+}

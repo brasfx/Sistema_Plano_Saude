@@ -61,28 +61,28 @@ if (isset($_SESSION['tipo'])) {
           <form class="login-form" action="../../php/planos/funcao.php" method="post" onsubmit="return formExame(this)">
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">person_outline</i>
+                <i class="material-icons prefix">subtitles</i>
                 <input class="validate" id="CPF" type="Number" name="CPF" required />
                 <label for="CPF" data-error="wrong" data-success="right">CPF do paciente</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">location_city</i>
+                <i class="material-icons prefix">date_range</i>
                 <input class="datepicker" id="data" type="text" name="data" required />
                 <label for="data" data-error="wrong" data-success="right">Data</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">location_city</i>
+                <i class="material-icons prefix">colorize</i>
                 <input class="validate" id="tipoExame" type="text" name="tipoExame" required />
                 <label for="tipoExame" data-error="wrong" data-success="right">Tipo de exame</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">local_phone</i>
+                <i class="material-icons prefix">description</i>
                 <textarea class="validate" id="resultado" type="text" name="resultado" placeholder="Resultados obtidos" required></textarea>
                 <label for="resultado" data-error="wrong" data-success="right">Resultado</label>
               </div>

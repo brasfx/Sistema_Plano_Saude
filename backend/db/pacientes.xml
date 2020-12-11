@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pacientes>
-  
-  <paciente CPF="13125350670" senha="1234">
-    <nome>Davi Lopes Ribeiro</nome>
-    <email>foxpc18@gmail.com</email>
-    <telefone>33988733531</telefone>
-    <CEP>96203900</CEP>
-    <endNum>256</endNum>
-    <idade>25</idade>
+  <paciente CPF="74366175088" senha="senhabruno123">
+    <nome>Bruno Oliveira</nome>
+    <email>brunooliveira@bemestar.com</email>
+    <telefone>5387451269</telefone>
+    <CEP>894578123</CEP>
+    <endNum>Rua B, 50</endNum>
+    <idade>20</idade>
     <genero>Masculino</genero>
-  </paciente>
-  <paciente CPF="123456" senha="123456">
-    <nome>Maria de Jesus</nome>
-    <email>mariadejesus@bemestar.com</email>
-    <telefone>5588798514</telefone>
-    <CEP>39847520</CEP>
-    <endNum>Rua D</endNum>
-    <idade>25</idade>
-    <genero>Feminino</genero>
   </paciente>
 </pacientes>

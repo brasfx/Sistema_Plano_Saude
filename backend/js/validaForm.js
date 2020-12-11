@@ -73,7 +73,7 @@ const formPac = ({ nome, CPF, senha }) => {
   }
 };
 
-const formLab = ({ nome, CRM: CNPJ, senha }) => {
+const formLab = ({ nome, CNPJ, senha }) => {
   if (nome.value.length < 3) {
     alert('Por favor, insira um nome válido!');
     nome.focus();
