@@ -38,6 +38,8 @@ function incluiPaciente($CPF, $email, $telefone, $senha, $nome, $CEP, $endNum, $
   }
 }
 
+
+
 function mostraPaciente($CPF)
 {
   $xml = new DOMDocument();
@@ -102,7 +104,7 @@ function alteraPaciente($CPF, $email, $senha, $telefone, $nome, $CEP, $endNum, $
       $endNum = ($endNum ? $endNum : $paciente->getElementsByTagName('endNum')[0]->nodeValue);
       $idade = ($idade ? $idade : $paciente->getElementsByTagName('idade')[0]->nodeValue);
       $genero = ($genero ? $genero : $paciente->getElementsByTagName('genero')[0]->nodeValue);
-      /*repopula o elemento Medico com a decisão anterior*/
+      /*repopula o elemento Paciente com a decisão anterior*/
       $pacienteatualizado = $xml->createElement('paciente');
       $pacienteatualizado->setAttribute('CPF', $CPF);
       $pacienteatualizado->setAttribute('senha', $senha);

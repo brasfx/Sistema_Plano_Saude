@@ -48,7 +48,7 @@ if (isset($_SESSION['tipo'])) {
       <ul id="dropdown2" class="dropdown-content" style="text-align: justify;">
         <li><a href="./exclui_med.php">Médico</a></li>
         <li><a href="./exclui_lab.php">Laboratório</a></li>
-        <li><a href="./exclui_pc.php">Paciente</a></li>
+        <li><a href="./exclui_pac.php">Paciente</a></li>
 
       </ul>
 
@@ -64,19 +64,8 @@ if (isset($_SESSION['tipo'])) {
     </nav>
     <div class="medico">
       <div class="input-field col s12">
-        <select class="browser-default">
-          <option value="" disabled selected>
-            Escolha o tipo de usuário
-          </option>
-          <option value="./form_med.php">Médico</option>
-          <option value="./form_lab.php">
-            Laboratório
-          </option>
-          <option value="./form_pac.php">
-            Paciente
-          </option>
-        </select>
-        <h5>Paciente</h5>
+
+        <h5>Adicionar admin</h5>
         <div id="login-page" class="row">
           <div class="col s12 z-depth-2 card-panel">
             <form class="login-form" action="../../php/planos/funcao.php" method="post">
@@ -93,64 +82,20 @@ if (isset($_SESSION['tipo'])) {
                   <input class="validate" id="CPF" type="text" name="CPF" />
                   <label for="CPF" data-error="wrong" data-success="right">CPF</label>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">loupe</i>
-                  <input class="validate" id="idade" type="number" name="idade" />
-                  <label for="idade" data-error="wrong" data-success="right">Idade</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">lock_outline</i>
+                    <input id="senha" type="password" name="senha" />
+                    <label for="senha">Senha</label>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">face</i>
-                  <input class="validate" id="genero" type="text" name="genero" />
-                  <label for="genero" data-error="wrong" data-success="right">Gênero</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">phone</i>
-                  <input class="validate" id="telefone" type="number" name="telefone" />
-                  <label for="telefone" data-error="wrong" data-success="right">Telefone</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">home</i>
-                  <input class="validate" id="CEP" type="number" name="CEP" />
-                  <label for="CEP" data-error="wrong" data-success="right">CEP</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">home</i>
-                  <input class="validate" id="endNum" type="text" name="endNum" />
-                  <label for="endNum" data-error="wrong" data-success="right">Endereço</label>
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">mail_outline</i>
-                  <input class="validate" id="email" type="email" name="email" />
-                  <label for="email" data-error="wrong" data-success="right">Email</label>
+                <div class="row center">
+                  <div class="input-field col s12">
+                    <input type="hidden" name="acao" value="insereAdmin">
+                    <button type="submit" class="btn waves-effect waves-light">Enviar</button>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">lock_outline</i>
-                  <input id="senha" type="password" name="senha" />
-                  <label for="senha">Senha</label>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="input-field col s12">
-                  <input type="hidden" name="acao" value="incluiPaciente">
-                  <button type="submit" class="btn waves-effect waves-light">Enviar</button>
-                </div>
-              </div>
             </form>
           </div>
         </div>
@@ -160,7 +105,6 @@ if (isset($_SESSION['tipo'])) {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="../../js/selectUser.js"></script>
       <script src="../../js/buttonsEffect.js"></script>
-      <script src="validaForm.js"></script>
 </body>
 
 </html>

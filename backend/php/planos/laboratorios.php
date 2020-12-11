@@ -92,7 +92,7 @@ function alteraLaboratorio($CNPJ, $email, $senha, $telefone, $nome, $CEP, $endNu
   foreach ($xml->getElementsByTagName('laboratorio') as $laboratorio) {
     if ($laboratorio->getAttribute('CNPJ') == $CNPJ) {
       /*verifica o que vai entrar de dados antigos ou atuais*/
-      $senha = ($senha ? $senha : $laboratorio->getAttribute('senha')->nodeValue);
+      $senha = ($senha ? $senha : $laboratorio->getAttribute('senha'));
       $nome = ($nome ? $nome : $laboratorio->getElementsByTagName('nome')[0]->nodeValue);
       $email = ($email ? $email : $laboratorio->getElementsByTagName('email')[0]->nodeValue);
       $telefone = ($telefone ? $telefone : $laboratorio->getElementsByTagName('telefone')[0]->nodeValue);
@@ -102,9 +102,9 @@ function alteraLaboratorio($CNPJ, $email, $senha, $telefone, $nome, $CEP, $endNu
       /*repopula o elemento laboratorio com a decisão anterior*/
       $laboratorioatualizado = $xml->createElement('laboratorio');
       $laboratorioatualizado->setAttribute('CNPJ', $CNPJ);
+      $laboratorioatualizado->setAttribute('senha', $senha);
       $laboratorioatualizado->appendChild(new DOMElement('nome', $nome));
       $laboratorioatualizado->appendChild(new DOMElement('email', $email));
-      $laboratorioatualizado->appendChild(new DOMElement('senha', $senha));
       $laboratorioatualizado->appendChild(new DOMElement('telefone', $telefone));
       $laboratorioatualizado->appendChild(new DOMElement('CEP', $CEP));
       $laboratorioatualizado->appendChild(new DOMElement('endNum', $endNum));

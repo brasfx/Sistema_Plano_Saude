@@ -7,16 +7,15 @@ if (isset($_POST["CRM"], $_POST["senha"])) {
     libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
     $arquivoxml = "../../DB/medicos.xml";
     $xml->load($arquivoxml);
-    $busca=array();
-    foreach($xml->getElementsByTagName('medico') as $medico){
-      if ($medico->getAttribute('CRM')== $_POST["CRM"] && $medico->getAttribute('senha')==$_POST["senha"]) {
+    $busca = array();
+    foreach ($xml->getElementsByTagName('medico') as $medico) {
+      if ($medico->getAttribute('CRM') == $_POST["CRM"] && $medico->getAttribute('senha') == $_POST["senha"]) {
         $_SESSION['tipo'] = "MED";
         $_SESSION['CRM'] = $_POST["CRM"];
         header("location: ./starter_med.php");
       }
     }
   }
-}else{
+} else {
   include "login_med.html";
 }
-?>

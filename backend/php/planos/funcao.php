@@ -6,6 +6,7 @@ include "./consultas.php";
 include "./laboratorios.php";
 include "./pacientes.php";
 include "./medicos.php";
+include "./admin.php";
 
 session_start();
 
@@ -30,13 +31,14 @@ if (isset($_POST["acao"])) {
           excluiMedico($_POST["CRM"]);
         }
       }
+      header("Location: ../admin/exclui_med.php");
       break;
     case 'alteraMedico':
       if (isset($_POST["CRM"])) { //só preciso saber obrigatoriamente o CRM
         //o resto se tiver eu atualizo, senão vai NULL para deixar como está
         alteraMedico($_POST["CRM"], (!empty($_POST["email"]) ? $_POST["email"] : NULL), (!empty($_POST["senha"]) ? $_POST["senha"] : NULL), (!empty($_POST["telefone"]) ? $_POST["telefone"] : NULL), (!empty($_POST["nome"]) ? $_POST["nome"] : NULL), (!empty($_POST["CEP"]) ? $_POST["CEP"] : NULL), (!empty($_POST["endNum"]) ? $_POST["endNum"] : NULL), (!empty($_POST["especialidade"]) ? $_POST["especialidade"] : NULL));
       }
-      header("Location: ../pages/Medico/starter_med.php");
+      header("Location: ../medico/editar_med.php");
       break;
     case 'mostraMedico':
       if (isset($_POST["CRM"])) { //só preciso saber obrigatoriamente o CRM
@@ -57,7 +59,7 @@ if (isset($_POST["acao"])) {
           }
         }
       }
-      header("Location: ../pages/Laboratorio/form_exame.php");
+      header("Location: ../lab/form_exame.php");
       break;
     case 'listaExames':
       $medMatriz = listaExames();
@@ -108,7 +110,8 @@ if (isset($_POST["acao"])) {
     case 'excluiPaciente':
       if (isset($_POST["CPF"])) { //só preciso saber obrigatoriamente o CPF
         if (!empty($_POST["CPF"])) {
-          excluiPacientes($_POST["CPF"]);
+          excluiPaciente($_POST["CPF"]);
+          header("Location: ../admin/exclui_pac.php");
         }
       }
       break;
@@ -150,13 +153,14 @@ if (isset($_POST["acao"])) {
           excluiLaboratorio($_POST["CNPJ"]);
         }
       }
+      header("Location: ../admin/exclui_lab.php");
       break;
     case 'alteraLaboratorio':
       if (isset($_POST["CNPJ"])) { //só preciso saber obrigatoriamente o CNPJ
         //o resto se tiver eu atualizo, senão vai NULL para deixar como está
         alteraLaboratorio($_POST["CNPJ"], (!empty($_POST["email"]) ? $_POST["email"] : NULL), (!empty($_POST["senha"]) ? $_POST["senha"] : NULL), (!empty($_POST["telefone"]) ? $_POST["telefone"] : NULL), (!empty($_POST["nome"]) ? $_POST["nome"] : NULL), (!empty($_POST["CEP"]) ? $_POST["CEP"] : NULL), (!empty($_POST["endNum"]) ? $_POST["endNum"] : NULL), (!empty($_POST["exametipos"]) ? $_POST["exametipos"] : NULL));
       }
-      header("Location: ../pages/Laboratorio/starter_lab.php");
+      header("Location: ../lab/starter_lab.php");
       break;
     case 'mostraLaboratorio':
       if (isset($_POST["CNPJ"])) { //só preciso saber obrigatoriamente o CNPJ
@@ -170,7 +174,7 @@ if (isset($_POST["acao"])) {
       /* CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS */
 
       //MEDICO SOMENTE INCLUI CONSULTAS
-      //PACIENTE BUSCA CONSULTAS EM OUTRO ARUIVO buscaConsultas.php
+      //PACIENTE BUSCA CONSULTAS EM OUTRO ARQUIVO buscaConsultas.php
     case 'incluiConsulta':
       // não precisa do $_POST["CRM"]
       // dado está em $_SESSION['CRM']
@@ -183,7 +187,25 @@ if (isset($_POST["acao"])) {
         }
       }
 
-      header("Location: ../pages/Medico/form_consultas.php");
+      header("Location: ../medico/form_consultas.php");
+      break;
+
+    case 'insereAdmin':
+      if (isset($_POST["CPF"], $_POST["senha"], $_POST["nome"])) {
+        if (!empty($_POST["CPF"]) && !empty($_POST["senha"]) && !empty($_POST["nome"])) {
+
+          insereAdmin($_POST["CPF"], $_POST["senha"], $_POST["nome"]);
+        }
+      }
+      header("Location: ../admin/form_admin.php");
+      break;
+
+    case 'alteraAdmin':
+      if (isset($_POST["CPF"])) { //só preciso saber obrigatoriamente o CPF
+        //o resto se tiver eu atualizo, senão vai NULL para deixar como está
+        alteraAdmin($_POST["CPF"], (!empty($_POST["senha"]) ? $_POST["senha"] : NULL), (!empty($_POST["nome"]) ? $_POST["nome"] : NULL));
+      }
+      header("Location: ../admin/editar_admin.php");
       break;
 
     default:

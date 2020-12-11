@@ -5,3 +5,14 @@ img {
 .nav-extended {
   background-color: #64ffda;
 }
+
+.table-consultas {
+  width: 1100px;
+  align-items: center;
+  margin-left: 200px;
+  padding: 30px;
+}
+
+.imagem-tabela {
+  width: 500px;
+}

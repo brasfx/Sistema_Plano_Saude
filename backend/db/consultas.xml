@@ -15,4 +15,19 @@
     <receita>cafe</receita>
     <observacoes>sono</observacoes>
   </consulta>
+  <consulta CPF="123456" CRM="101628">
+    <data>2019-06-10</data>
+    <receita>cafe</receita>
+    <observacoes>sono</observacoes>
+  </consulta>
+  <consulta CPF="123456" CRM="987654">
+    <data>2020-12-10</data>
+    <receita>1 dipirona,2 paracetamol</receita>
+    <observacoes>Tomar de 6 em 6 horas</observacoes>
+  </consulta>
+  <consulta CPF="123456" CRM="151515">
+    <data>18-12-2020</data>
+    <receita>Dipirona</receita>
+    <observacoes>Nada</observacoes>
+  </consulta>
 </consultas>

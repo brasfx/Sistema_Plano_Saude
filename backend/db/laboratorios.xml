@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <laboratorios>
-
+  <laboratorio CNPJ="151515" senha="123">
+    <nome>aaagfdgdfgdf</nome>
+    <email>teste2@test.com</email>
+    <telefone>4654564654654</telefone>
+    <CEP>96525252</CEP>
+    <endNum>5</endNum>
+    <exametipos>tipagem</exametipos>
+  </laboratorio>
+  <laboratorio CNPJ="10020030040011" senha="123">
+    <nome>lunavi 3</nome>
+    <email>teste@test.com</email>
+    <telefone>999734999</telefone>
+    <CEP>96204050</CEP>
+    <endNum>99</endNum>
+    <exametipos>tipagem; raio-x; ultra-som;</exametipos>
+  </laboratorio>
   <laboratorio CNPJ="123456" senha="123456">
     <nome>lab sangue</nome>
     <email>labsangue@bemestar.com</email>
@@ -9,4 +24,5 @@
     <endNum>Rua A</endNum>
     <exametipos>Sangue</exametipos>
   </laboratorio>
+  
 </laboratorios>

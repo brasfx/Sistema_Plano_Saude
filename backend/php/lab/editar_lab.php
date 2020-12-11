@@ -4,198 +4,137 @@ if (isset($_SESSION['tipo'])) {
   if ($_SESSION['tipo'] != "LAB") {
     header("location: login_lab.php");
   }
-}else{
+} else {
   header("location: login_lab.php");
 }
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Início Laboratório</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="../../dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../frontend/css/cadastro.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
   <!-- Google Font -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+<body>
 
-  <!-- Main Header -->
-  <header class="main-header">
+  <nav class="nav-extended">
+    <div></div>
+    <div class="nav-wrapper">
+      <a href="./starter_lab.php" class="brand-logo"><img src="../../../frontend/img/logo.png" /></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="./starter_lab.php">Inicio</a></li>
+        <li><a href="./exibir_exame_lab.php">Ver historico</a></li>
 
-    <!-- Logo -->
-    <a href="starter_admin.php" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>P</b>HG</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Planos</b>HG</span>
-    </a>
-
-    <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-      <!-- Navbar Right Menu -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- User Account Menu -->
-          <li class="dropdown user user-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Laboratório</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- The user image in the menu -->
-              <li class="user-header">
-                <p style="text-align:center;">
-                  Laboratório
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#" class="btn btn-default btn-flat">Perfil</a>
-                  </div>
-                  <div class="col-xs-3"></div>
-                  <div class="col-xs-4 text-center">
-                    <a href="logout_lab.php" class="btn btn-default">Deslogar</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-
-      <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MENU</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="starter_lab.php"><i class="fa fa-laptop"></i> <span>Início</span></a></li>
-        <li><a href="exibir_exame_lab.php"><i class="fa fa-map-pin"></i> <span>Ver histórico</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-edit"></i> <span>Cadastro</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Editar meu cadastro</a></li>
-            <li><a href="form_exame.php">Adicionar exames</a></li>
-          </ul>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li>
+          <a style="display: flex; flex-direction: row" href="../../../home.html">
+            <i class="material-icons">exit_to_app</i>Logout</a>
         </li>
       </ul>
-      <!-- /.sidebar-menu -->
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <p style="font-size: 22px"><b>Meu cadastro</b>
-        </p>
-    </section>
-
-    <!-- Main content -->
-    <section class="content container-fluid">
-      <div class="box box-primary">
-        <!-- /.box-header -->
-        <!-- form start -->
-        <form role="form" action="../../planoshg/funcao.php" method="post">
-          <div class="box-body">
-            <div class="form-group">
-              <label for="nomeLab">Nome</label>
-              <input type="text" class="form-control" name="nome" placeholder="Fulano de tal" required>
-            </div>
-            <div class="form-group">
-              <label for="cepLab">CEP</label>
-              <input type="number" class="form-control" name="CEP" placeholder="96000000" required>
-            </div>
-            <div class="form-group">
-              <label for="endNum">Número</label>
-              <input type="number" class="form-control" name="endNum" placeholder="99" required>
-            </div>
-            <div class="form-group">
-              <label for="telefoneLab">Telefone</label>
-              <input type="number" class="form-control" name="telefone" placeholder="99999999999" required>
-            </div>
-            <div class="form-group">
-              <label for="emailLab">Email</label>
-              <input type="email" class="form-control" name="email" placeholder="laboratorio@email" required>
-            </div>
-            <div class="form-group">
-              <label for="tiposExame">Tipos de exame</label>
-              <textarea class="form-control" name="exametipos" placeholder="Tipagem" rows="4" cols="10" required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="CNPJ">CNPJ</label>
-              <input type="number" class="form-control" name="CNPJ" placeholder="000000000000000" required>
-            </div>
-            <div class="form-group">
-              <label for="pwdLab">Senha</label>
-              <input type="password" class="form-control" name="senha" placeholder="Senha" required>
-            </div>
-          </div>
-          <!-- /.box-body -->
-
-          <div class="box-footer">
-            <input type="hidden" name="acao" value="alteraLaboratorio">
-            <button type="submit" class="btn btn-primary">Salvar</button>
-          </div>
-        </form>
-      </div>
-    
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      Sistemas HG
     </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2019 <a href="#">SHG</a>.</strong> Todos os direitos reservados.
-  </footer>
+    <ul id="dropdown" class="dropdown-content">
+      <li><a href="./editar_lab.php">Editar meu cadastro</a></li>
+      <li><a href="./form_exame.php">Adicionar exames</a></li>
+    </ul>
+    <div class="nav-content">
+      <span class="nav-title"></span>
 
-<!-- REQUIRED JS SCRIPTS -->
+    </div>
+  </nav>
+  <div class="medico">
+    <div class="input-field col s12">
+      <h5>Meu cadastro</h5>
+      <div id="login-page" class="row">
+        <div class="col s12 z-depth-2 card-panel">
+          <form class="login-form" action="../../php/planos/funcao.php" method="post">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input class="validate" id="nome" type="text" name="nome" />
+                <label for="nome" data-error="wrong" data-success="right">Nome</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">location_city</i>
+                <input class="validate" id="CEP" type="number" name="CEP" />
+                <label for="CEP" data-error="wrong" data-success="right">CEP</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">location_city</i>
+                <input class="validate" id="endNum" type="text" name="endNum" />
+                <label for="endNum" data-error="wrong" data-success="right">Endereço</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">local_phone</i>
+                <input class="validate" id="telefone" type="number" name="telefone" />
+                <label for="telefone" data-error="wrong" data-success="right">Telefone</label>
+              </div>
+            </div>
 
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">subtitles</i>
+                <input class="validate" id="CNPJ" type="number" name="CNPJ" />
+                <label for="CNPJ" data-error="wrong" data-success="right">CNPJ</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">local_hospital</i>
+                <input class="validate" id="exametipos" type="text" name="exametipos" />
+                <label for="exametipos" data-error="wrong" data-success="right">Tipo de exame</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input class="validate" id="email" type="email" name="email" />
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id="senha" type="password" name="senha" />
+                <label for="password">Senha</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="hidden" name="acao" value="alteraLaboratorio">
+                <button type="submit" class="btn waves-effect waves-light">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 3 -->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/buttonsEffect.js"></script>
+
 </body>
+
 </html>

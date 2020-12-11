@@ -27,20 +27,37 @@ if (isset($_SESSION['tipo'])) {
 <body>
   <div class="nav-wrapper">
     <nav class="nav-extended">
+      <div></div>
       <div class="nav-wrapper">
-        <a href="./starter_admin.php" class="brand-logo"> <img src="../../../frontend/img/logo.png" /></a>
+        <a href="./starter_admin.php" class="brand-logo"><img src="../../../frontend/img/logo.png" /></a>
         <ul class="right hide-on-med-and-down">
-          <li><a>A link</a></li>
-          <li><a>A second link</a></li>
+          <li><a href="./starter_admin.php">Inicio</a></li>
+
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Excluir<i class="material-icons right">arrow_drop_down</i></a></li>
           <li>
-            <a style="display: flex; flex-direction: row" href="../../../frontend/html/home.html">
+            <a style="display: flex; flex-direction: row" href="../../../home.html">
               <i class="material-icons">exit_to_app</i>Logout</a>
           </li>
         </ul>
       </div>
+      <ul id="dropdown" class="dropdown-content" style="text-align: justify;">
+        <li><a href="./editar_admin.php">Editar meu cadastro</a></li>
+        <li><a href="./form_admin.php">Adicionar novo admin</a></li>
+      </ul>
+      <ul id="dropdown2" class="dropdown-content" style="text-align: justify;">
+        <li><a href="./exclui_med.php">Médico</a></li>
+        <li><a href="./exclui_lab.php">Laboratório</a></li>
+        <li><a href="./exclui_pc.php">Paciente</a></li>
+
+      </ul>
+
+      <div class="nav-content">
+
+      </div>
       <div class="nav-content">
         <span class="nav-title"></span>
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" href="../../../frontend/html/cadastro.html">
+        <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" href="./cadastro.php">
           <i class="material-icons">add</i>
         </a>
       </div>
@@ -136,6 +153,7 @@ if (isset($_SESSION['tipo'])) {
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="../../js/selectUser.js"></script>
+      <script src="../../js/buttonsEffect.js"></script>
       <script src="validaForm.js"></script>
 </body>
 

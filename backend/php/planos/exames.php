@@ -15,32 +15,34 @@
 //   return $existe;
 // }
 
-function incluiExame($CPF, $CNPJ, $data, $tipoExame, $resultado){
+function incluiExame($CPF, $CNPJ, $data, $tipoExame, $resultado)
+{
   // if (!existeExame($CPF)) {
-    $arquivoxml = "../DB/exames.xml";
-    $xml = new DOMDocument();
-    $xml->load($arquivoxml);
-    $exames = $xml->getElementsByTagName('exames')[0];
-    $exame = $exames->appendChild(new DOMElement('exame'));
-    $xml->save($arquivoxml);
-    $exame->setAttribute('CPF', $CPF);
-    $exame->setAttribute('CNPJ', $CNPJ);
-    $exame->appendChild(new DOMElement('data', $data));
-    $exame->appendChild(new DOMElement('tipoExame', $tipoExame));
-    $exame->appendChild(new DOMElement('resultado', $resultado));
-    $xml->save($arquivoxml);
+  $arquivoxml = "../../db/exames.xml";
+  $xml = new DOMDocument();
+  $xml->load($arquivoxml);
+  $exames = $xml->getElementsByTagName('exames')[0];
+  $exame = $exames->appendChild(new DOMElement('exame'));
+  $xml->save($arquivoxml);
+  $exame->setAttribute('CPF', $CPF);
+  $exame->setAttribute('CNPJ', $CNPJ);
+  $exame->appendChild(new DOMElement('data', $data));
+  $exame->appendChild(new DOMElement('tipoExame', $tipoExame));
+  $exame->appendChild(new DOMElement('resultado', $resultado));
+  $xml->save($arquivoxml);
   // }
 }
 
-function mostraExameLAB($CNPJ){ // exames por laboratorio
+function mostraExameLAB($CNPJ)
+{ // exames por laboratorio
   $xml = new DOMDocument();
   libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  $arquivoxml = "../../DB/exames.xml";
+  $arquivoxml = "../../db/exames.xml";
   $xml->load($arquivoxml);
-  $busca=array();
-  $count=0;
+  $busca = array();
+  $count = 0;
   foreach ($xml->getElementsByTagName('exame') as $exame) {
-    if ($exame->getAttribute('CNPJ')==$CNPJ) {
+    if ($exame->getAttribute('CNPJ') == $CNPJ) {
       $busca[$count]['CPF'] = $exame->getAttribute('CPF');
       $busca[$count]['data'] = $exame->getElementsByTagName('data')[0]->nodeValue;
       $busca[$count]['resultado'] = $exame->getElementsByTagName('resultado')[0]->nodeValue;
@@ -52,15 +54,16 @@ function mostraExameLAB($CNPJ){ // exames por laboratorio
   return $busca;
 }
 
-function mostraExamePAC($CPF){ // exames por paciente
+function mostraExamePAC($CPF)
+{ // exames por paciente
   $xml = new DOMDocument();
   libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  $arquivoxml = "../../DB/exames.xml";
+  $arquivoxml = "../../db/exames.xml";
   $xml->load($arquivoxml);
-  $busca=array();
-  $count=0;
+  $busca = array();
+  $count = 0;
   foreach ($xml->getElementsByTagName('exame') as $exame) {
-    if ($exame->getAttribute('CPF')==$CPF) {
+    if ($exame->getAttribute('CPF') == $CPF) {
       $busca[$count]['CNPJ'] = $exame->getAttribute('CNPJ');
       $busca[$count]['data'] = $exame->getElementsByTagName('data')[0]->nodeValue;
       $busca[$count]['resultado'] = $exame->getElementsByTagName('resultado')[0]->nodeValue;
@@ -72,12 +75,13 @@ function mostraExamePAC($CPF){ // exames por paciente
   return $busca;
 }
 
-function listaExames(){
+function listaExames()
+{
   $xml = new DOMDocument();
   libxml_use_internal_errors(true); //TOTALMENTE NECESSÁRIO, ÚTIL DESABILITAR SOMENTE PARA VER ERROS HUMANOS
-  $arquivoxml = "../DB/exames.xml";
+  $arquivoxml = "../../db/exames.xml";
   $xml->load($arquivoxml);
-  $busca=array();
+  $busca = array();
   foreach ($xml->getElementsByTagName('exame') as $exame) {
     $CPF = $exame->getAttribute('CPF');
     $busca[$CPF]['resultado'] = $exame->getElementsByTagName('resultado')[0]->nodeValue;

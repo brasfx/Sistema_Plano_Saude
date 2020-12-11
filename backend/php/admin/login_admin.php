@@ -14,8 +14,6 @@ if (isset($_POST["login"], $_POST["senha"])) {
         $_SESSION['tipo'] = "ADMIN";
         $_SESSION['nome'] = $admin->nodeValue;
         header("location: ./starter_admin.php");
-      } else {
-        //header("location: ./login_admin.html");
       }
     }
     //header("location: ./starter_admin.php");

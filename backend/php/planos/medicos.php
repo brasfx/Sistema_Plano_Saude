@@ -91,9 +91,9 @@ function alteraMedico($CRM, $email, $senha, $telefone, $nome, $CEP, $endNum, $es
   foreach ($xml->getElementsByTagName('medico') as $medico) {
     if ($medico->getAttribute('CRM') == $CRM) {
       /*verifica o que vai entrar de dados antigos ou atuais*/
-      $nome = ($nome ? $nome : $medico->getAttribute('senha'));
+      $senha = ($senha ? $senha : $medico->getAttribute('senha'));
       $email = ($email ? $email : $medico->getElementsByTagName('email')[0]->nodeValue);
-      $senha = ($senha ? $senha : $medico->getElementsByTagName('nome')[0]->nodeValue);
+      $nome = ($nome ? $nome : $medico->getElementsByTagName('nome')[0]->nodeValue);
       $telefone = ($telefone ? $telefone : $medico->getElementsByTagName('telefone')[0]->nodeValue);
       $CEP = ($CEP ? $CEP : $medico->getElementsByTagName('CEP')[0]->nodeValue);
       $endNum = ($endNum ? $endNum : $medico->getElementsByTagName('endNum')[0]->nodeValue);

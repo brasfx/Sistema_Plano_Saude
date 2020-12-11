@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <administradores>
-
   <admin login="123456" senha="123">Eric Gondran</admin>
+  <admin login="1234567" senha="123">Eric Gondran</admin>
+  <admin login="12345678" senha="123">Eric Gondran</admin>
+  <admin login="123123" senha="123456">
+    <nome>Maria</nome>
+  </admin>
 </administradores>

@@ -10,22 +10,18 @@ if (isset($_SESSION['tipo'])) {
 ?>
 
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Início Admin</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" type="text/css" href="../../../frontend/css/index.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../../frontend/css/cadastro.css" />
+  <!--Import Google Icon Font-->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <title>Login</title>
 </head>
 
 <body>
@@ -51,7 +47,7 @@ if (isset($_SESSION['tipo'])) {
     <ul id="dropdown2" class="dropdown-content" style="text-align: justify;">
       <li><a href="./exclui_med.php">Médico</a></li>
       <li><a href="./exclui_lab.php">Laboratório</a></li>
-      <li><a href="./exclui_pac.php">Paciente</a></li>
+      <li><a href="./exclui_pc.php">Paciente</a></li>
 
     </ul>
 
@@ -65,14 +61,31 @@ if (isset($_SESSION['tipo'])) {
       </a>
     </div>
   </nav>
+  <div class="nav-wrapper">
+    <div class="medico">
+      <div class="input-field col s12">
+        <h5>Cadastro de usuário</h5>
+        <select class="browser-default">
+          <option value="" disabled selected>
+            Escolha o tipo de usuário
+          </option>
+          <option value="./form_med.php">Médico</option>
+          <option value="./form_lab.php">
+            Laboratório
+          </option>
+          <option value="./form_pac.php">
+            Paciente
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
 
-  <!-- REQUIRED JS SCRIPTS -->
-
-  <!-- jQuery 3 -->
-  <script src="jquery-3.5.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../../js/selectUser.js"></script>
   <script src="../../js/buttonsEffect.js"></script>
-
 </body>
 
 </html>
