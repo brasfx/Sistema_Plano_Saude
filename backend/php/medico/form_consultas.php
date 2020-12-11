@@ -62,25 +62,25 @@ if (isset($_SESSION['tipo'])) {
         <h5>Cadastro de consulta</h5>
         <div id="login-page" class="row">
           <div class="col s12 z-depth-2 card-panel">
-            <form name="form_consulta" class="login-form" action="../../php/planos/funcao.php" method="post">
+            <form name="form_consulta" class="login-form" action="../../php/planos/funcao.php" method="post" onsubmit="return formConsulta(this)">
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">date_range</i>
-                  <input class="datepicker" id="data" type="text" name="data" />
+                  <input class="datepicker" id="data" type="text" name="data" required />
                   <label for="data" data-error="wrong" data-success="right">Data</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">phone</i>
-                  <input class="validate" id="CPF" type="number" name="CPF" />
+                  <input class="validate" id="CPF" type="number" name="CPF" required />
                   <label for="CPF" data-error="wrong" data-success="right">CPF do paciente</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">event_note</i>
-                  <textarea class="validate" id="receita" type="text" name="receita" placeholder="Dados da receita"></textarea>
+                  <textarea class="validate" id="receita" type="text" name="receita" placeholder="Dados da receita" required></textarea>
                   <label for="receita" data-error="wrong" data-success="right">Receita</label>
                 </div>
               </div>
@@ -112,6 +112,7 @@ if (isset($_SESSION['tipo'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../../js/nav.js"></script>
     <script src="../../js/datePicker.js"></script>
+    <script src="../../js/validaForm.js"></script>
 
 </body>
 

@@ -79,32 +79,32 @@ if (isset($_SESSION['tipo'])) {
         <h5>Laboratório</h5>
         <div id="login-page" class="row">
           <div class="col s12 z-depth-2 card-panel">
-            <form class="login-form" action="../../php/planos/funcao.php" method="post">
+            <form class="login-form" action="../../php/planos/funcao.php" method="post" onsubmit="return formLab(this)">
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">person_outline</i>
-                  <input class="validate" id="nome" type="text" name="nome" />
+                  <input class="validate" id="nome" type="text" name="nome" required />
                   <label for="nome" data-error="wrong" data-success="right">Nome</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">location_city</i>
-                  <input class="validate" id="CEP" type="number" name="CEP" />
+                  <input class="validate" id="CEP" type="number" name="CEP" required />
                   <label for="CEP" data-error="wrong" data-success="right">CEP</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">location_city</i>
-                  <input class="validate" id="endNum" type="text" name="endNum" />
+                  <input class="validate" id="endNum" type="text" name="endNum" required />
                   <label for="endNum" data-error="wrong" data-success="right">Endereço</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">local_phone</i>
-                  <input class="validate" id="telefone" type="number" name="telefone" />
+                  <input class="validate" id="telefone" type="number" name="telefone" required />
                   <label for="telefone" data-error="wrong" data-success="right">Telefone</label>
                 </div>
               </div>
@@ -112,28 +112,28 @@ if (isset($_SESSION['tipo'])) {
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">subtitles</i>
-                  <input class="validate" id="CNPJ" type="number" name="CNPJ" />
+                  <input class="validate" id="CNPJ" type="number" name="CNPJ" required />
                   <label for="CNPJ" data-error="wrong" data-success="right">CNPJ</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">local_hospital</i>
-                  <input class="validate" id="exametipos" type="text" name="exametipos" />
+                  <input class="validate" id="exametipos" type="text" name="exametipos" required />
                   <label for="exametipos" data-error="wrong" data-success="right">Tipo de exame</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">mail_outline</i>
-                  <input class="validate" id="email" type="email" name="email" />
+                  <input class="validate" id="email" type="email" name="email" required />
                   <label for="email" data-error="wrong" data-success="right">Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">lock_outline</i>
-                  <input id="senha" type="password" name="senha" />
+                  <input id="senha" type="password" name="senha" required />
                   <label for="password">Senha</label>
                 </div>
               </div>
@@ -154,7 +154,8 @@ if (isset($_SESSION['tipo'])) {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="../../js/selectUser.js"></script>
       <script src="../../js/buttonsEffect.js"></script>
-      <script src="validaForm.js"></script>
+      <script src="../../js/validaForm.js"></script>
+
 </body>
 
 </html>

@@ -7,6 +7,8 @@ if (isset($_SESSION['tipo'])) {
 } else {
   header("location: login_lab.php");
 }
+include "../planos/laboratorios.php";
+$laboratorios = mostraLaboratorio($_SESSION['CNPJ']);
 ?>
 
 <!DOCTYPE html>
@@ -53,10 +55,13 @@ if (isset($_SESSION['tipo'])) {
 
     </div>
   </nav>
-  <!--<div class="center">
-    <h4 style="font-weight: bold;">Seja bem vindo</h4>
-    <img style="width: 900px;align-items: center;" src="../../../frontend/img/tabela.png" />
-  </div>-->
+  <div class="center" style="font-size: 30px;margin-top:20px">
+    <?php
+    foreach ($laboratorios as $laboratorio) {
+    }
+    echo "<strong>Seja bem vindo ao nosso sistema, {$laboratorios['nome']}.";
+    ?>
+  </div>
 
   <!-- REQUIRED JS SCRIPTS -->
 

@@ -46,9 +46,9 @@ function mostraMedico($CRM)
   $busca = array();
   foreach ($xml->getElementsByTagName('medico') as $medico) {
     if ($medico->getAttribute('CRM') == $CRM) {
-      $busca['nome'] = $medico->getAttribute('senha');
+      $busca['senha'] = $medico->getAttribute('senha');
       $busca['email'] = $medico->getElementsByTagName('email')[0]->nodeValue;
-      $busca['senha'] = $medico->getElementsByTagName('nome')[0]->nodeValue;
+      $busca['nome'] = $medico->getElementsByTagName('nome')[0]->nodeValue;
       $busca['telefone'] = $medico->getElementsByTagName('telefone')[0]->nodeValue;
       $busca['CEP'] = $medico->getElementsByTagName('CEP')[0]->nodeValue;
       $busca['endNum'] = $medico->getElementsByTagName('endNum')[0]->nodeValue;
@@ -68,9 +68,9 @@ function listaMedicos()
   $busca = array();
   foreach ($xml->getElementsByTagName('medico') as $medico) {
     $CRM = $medico->getAttribute('CRM');
-    $busca[$CRM]['nome'] = $medico->getAttribute('senha');
+    $busca[$CRM]['senha'] = $medico->getAttribute('senha');
     $busca[$CRM]['email'] = $medico->getElementsByTagName('email')[0]->nodeValue;
-    $busca[$CRM]['senha'] = $medico->getElementsByTagName('nome')[0]->nodeValue;
+    $busca[$CRM]['nome'] = $medico->getElementsByTagName('nome')[0]->nodeValue;
     $busca[$CRM]['telefone'] = $medico->getElementsByTagName('telefone')[0]->nodeValue;
     $busca[$CRM]['CEP'] = $medico->getElementsByTagName('CEP')[0]->nodeValue;
     $busca[$CRM]['endNum'] = $medico->getElementsByTagName('endNum')[0]->nodeValue;
@@ -104,7 +104,6 @@ function alteraMedico($CRM, $email, $senha, $telefone, $nome, $CEP, $endNum, $es
       $medicoatualizado->setAttribute('senha', $senha);
       $medicoatualizado->appendChild(new DOMElement('nome', $nome));
       $medicoatualizado->appendChild(new DOMElement('email', $email));
-      $medicoatualizado->appendChild(new DOMElement('senha', $senha));
       $medicoatualizado->appendChild(new DOMElement('telefone', $telefone));
       $medicoatualizado->appendChild(new DOMElement('CEP', $CEP));
       $medicoatualizado->appendChild(new DOMElement('endNum', $endNum));

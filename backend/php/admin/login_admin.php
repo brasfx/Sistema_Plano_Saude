@@ -19,5 +19,6 @@ if (isset($_POST["login"], $_POST["senha"])) {
     //header("location: ./starter_admin.php");
   }
 } else {
+
   include "./login_admin.html";
 }

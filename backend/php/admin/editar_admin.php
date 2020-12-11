@@ -68,7 +68,7 @@ if (isset($_SESSION['tipo'])) {
         <h5>Meu perfil</h5>
         <div id="login-page" class="row">
           <div class="col s12 z-depth-2 card-panel">
-            <form class="login-form" action="../../php/planos/funcao.php" method="post">
+            <form class="login-form" action="../../php/planos/funcao.php" method="post" onsubmit="return formAdmin(this)">
               <div class="row">
                 <div class="input-field col s12">
                   <i class="material-icons prefix">person_outline</i>
@@ -105,7 +105,7 @@ if (isset($_SESSION['tipo'])) {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="../../js/selectUser.js"></script>
       <script src="../../js/buttonsEffect.js"></script>
-      <script src="validaForm.js"></script>
+      <script src="../../js/validaForm.js"></script>
 </body>
 
 </html>

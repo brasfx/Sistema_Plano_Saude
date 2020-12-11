@@ -7,6 +7,8 @@ if (isset($_SESSION['tipo'])) {
 } else {
   header("location: login_pac.php");
 }
+include "../planos/pacientes.php";
+$pacientes = mostraPerfil($_SESSION['CPF']);
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +55,14 @@ if (isset($_SESSION['tipo'])) {
 
     </div>
   </nav>
+  <div class="center" style="font-size: 30px;margin-top:20px">
+    <?php
+    foreach ($pacientes as $paciente) {
+      echo "<strong>Seja bem vindo ao nosso sistema, {$paciente['nome']}.";
+    }
 
+    ?>
+  </div>
   <!-- REQUIRED JS SCRIPTS -->
 
   <!-- jQuery 3 -->

@@ -7,6 +7,8 @@ if (isset($_SESSION['tipo'])) {
 } else {
   header("location: login_med.php");
 }
+include "../planos/medicos.php";
+$medicos = mostraMedico($_SESSION['CRM']);
 ?>
 
 <!DOCTYPE html>
@@ -53,9 +55,12 @@ if (isset($_SESSION['tipo'])) {
 
     </div>
   </nav>
-  <div class="center">
-    <h4 style="font-weight: bold;">Seja bem vindo</h4>
-    <img style="width: 900px;align-items: center;" src="../../../frontend/img/tabela.png" />
+  <div class="center" style="font-size: 30px;margin-top:20px">
+    <?php
+    foreach ($medicos as $medico) {
+    }
+    echo "<strong>Seja bem vindo ao nosso sistema, Dr(a). {$medicos['nome']}.";
+    ?>
   </div>
 
   <!-- REQUIRED JS SCRIPTS -->

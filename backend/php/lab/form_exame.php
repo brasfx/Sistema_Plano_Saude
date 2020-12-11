@@ -58,7 +58,7 @@ if (isset($_SESSION['tipo'])) {
       <h5>Novo exame</h5>
       <div id="login-page" class="row">
         <div class="col s12 z-depth-2 card-panel">
-          <form class="login-form" action="../../php/planos/funcao.php" method="post">
+          <form class="login-form" action="../../php/planos/funcao.php" method="post" onsubmit="return formExame(this)">
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">person_outline</i>
@@ -69,14 +69,14 @@ if (isset($_SESSION['tipo'])) {
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">location_city</i>
-                <input class="datepicker" id="data" type="text" name="data" />
+                <input class="datepicker" id="data" type="text" name="data" required />
                 <label for="data" data-error="wrong" data-success="right">Data</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">location_city</i>
-                <input class="validate" id="tipoExame" type="text" name="tipoExame" />
+                <input class="validate" id="tipoExame" type="text" name="tipoExame" required />
                 <label for="tipoExame" data-error="wrong" data-success="right">Tipo de exame</label>
               </div>
             </div>
@@ -106,6 +106,7 @@ if (isset($_SESSION['tipo'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../../js/buttonsEffect.js"></script>
     <script src="../../js/datePicker.js"></script>
+    <script src="../../js/validaForm.js"></script>
 
 </body>
 
