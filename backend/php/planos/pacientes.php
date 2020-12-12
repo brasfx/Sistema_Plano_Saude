@@ -38,8 +38,6 @@ function incluiPaciente($CPF, $email, $telefone, $senha, $nome, $CEP, $endNum, $
   }
 }
 
-
-
 function mostraPaciente($CPF)
 {
   $xml = new DOMDocument();

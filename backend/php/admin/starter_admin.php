@@ -11,7 +11,6 @@ if (isset($_SESSION['tipo'])) {
 ?>
 
 <!DOCTYPE html>
-
 <html>
 
 <head>

@@ -110,9 +110,9 @@ if (isset($_SESSION['tipo'])) {
     <!-- jQuery 3 -->
     <script src="jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../../js/nav.js"></script>
     <script src="../../js/datePicker.js"></script>
     <script src="../../js/validaForm.js"></script>
+    <script src="../../js/buttonsEffect.js"></script>
 
 </body>
 

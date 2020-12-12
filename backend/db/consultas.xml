@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <consultas>
 
-<consulta CPF="74366175088" CRM="326995651"><data>18-12-2020</data><receita>1 dipirona</receita><observacoes>Tomar de 6 em 6 horas</observacoes></consulta></consultas>
+  <consulta CPF="74366175088" CRM="326995651">
+    <data>18-12-2020</data>
+    <receita>1 dipirona</receita>
+    <observacoes>Tomar de 6 em 6 horas</observacoes>
+  </consulta>
+</consultas>
