@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <administradores>
-  <admin login="12345678910" senha="123456">
-    <nome>Davi</nome>
+  <admin login="12345678910" senha="senha123">
+    <nome>José da Silva</nome>
   </admin>
   <admin login="91105575047" senha="senhaadmin123">
     <nome>Pedro</nome>
+  </admin>
+  <admin login="1234567891213" senha="senhamaria123">
+    <nome>Maria</nome>
   </admin>
 </administradores>

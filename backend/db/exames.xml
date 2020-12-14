@@ -6,4 +6,9 @@
     <tipoExame>Sangue</tipoExame>
     <resultado>Nenhuma alteração encontrada.</resultado>
   </exame>
+  <exame CPF="74366175088" CNPJ="96167380000122">
+    <data>25-12-2020</data>
+    <tipoExame>Urina</tipoExame>
+    <resultado>O exame tá ok</resultado>
+  </exame>
 </exames>

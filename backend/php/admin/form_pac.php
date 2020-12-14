@@ -48,7 +48,7 @@ if (isset($_SESSION['tipo'])) {
       <ul id="dropdown2" class="dropdown-content" style="text-align: justify;">
         <li><a href="./exclui_med.php">Médico</a></li>
         <li><a href="./exclui_lab.php">Laboratório</a></li>
-        <li><a href="./exclui_pc.php">Paciente</a></li>
+        <li><a href="./exclui_pac.php">Paciente</a></li>
 
       </ul>
 
